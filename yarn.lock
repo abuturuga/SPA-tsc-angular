@@ -2,12 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/angular-material@^1.1.54":
-  version "1.1.54"
-  resolved "https://registry.yarnpkg.com/@types/angular-material/-/angular-material-1.1.54.tgz#ee0649754c02b7b08f4b50126104112e970e999b"
-  dependencies:
-    "@types/angular" "*"
-
 "@types/angular-mocks@^1.5.11":
   version "1.5.11"
   resolved "https://registry.yarnpkg.com/@types/angular-mocks/-/angular-mocks-1.5.11.tgz#d5bbefbf742f2196071bda0fe051878b6f4fd72c"
@@ -116,10 +110,6 @@ angular-animate@^1.6.6:
 angular-aria@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.6.tgz#58dd748e09564bc8409f739bde57b35fbee5b6a5"
-
-angular-material@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
 
 angular-messages@^1.6.6:
   version "1.6.6"

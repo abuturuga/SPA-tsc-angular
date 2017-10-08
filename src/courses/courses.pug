@@ -1,10 +1,11 @@
+h1 Courses
+
 md-content.md-padding(
-  layout-xs='column' 
-  layout='row'
+    layout-gt-xs='row'
+    layout-align='start center'
   )
-  div(
+  course-card(
+    flex='50' 
+    data-title="course.title" 
     ng-repeat='course in $ctrl.courses'
-    flex='50'
-    layout='column'
-    )
-    course-card(data-title="course.title")
+  )

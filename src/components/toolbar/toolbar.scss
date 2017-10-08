@@ -1,0 +1,24 @@
+app-toolbar {
+  display: block;
+  background: #2196F3;
+  padding: 4px 16px;
+
+  .app-toolbar-content {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toolbar-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .toolbar-link {
+    margin-left: 8px;
+  }
+
+}
