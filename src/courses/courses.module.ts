@@ -1,5 +1,6 @@
 import * as angular from 'angular';
 import '@uirouter/angularjs';
+import CoursesService from './courses.service';
 import { CoursesComponent } from './courses.component';
 
 class Config {
@@ -19,6 +20,7 @@ class Config {
 }
 
 export default angular.module('courses', ['ui.router'])
+  .service('CoursesService', CoursesService)
   .component('courses', CoursesComponent)
   .config(Config)
   .name;

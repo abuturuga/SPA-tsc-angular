@@ -10,6 +10,13 @@ module.exports = {
   resolve: {
     extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
   },
+  devServer: {
+    proxy: {
+      '/api/v1.0': {
+        target: 'http://localhost:3000',
+      }
+    }
+  },
   module: {
     loaders: [
       {

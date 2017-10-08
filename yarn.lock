@@ -8,6 +8,12 @@
   dependencies:
     "@types/angular" "*"
 
+"@types/angular-mocks@^1.5.11":
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/@types/angular-mocks/-/angular-mocks-1.5.11.tgz#d5bbefbf742f2196071bda0fe051878b6f4fd72c"
+  dependencies:
+    "@types/angular" "*"
+
 "@types/angular-ui-router@^1.1.39":
   version "1.1.39"
   resolved "https://registry.yarnpkg.com/@types/angular-ui-router/-/angular-ui-router-1.1.39.tgz#dffe4083e8a59b287981cb41896447f32b3663c4"
@@ -118,6 +124,10 @@ angular-material@^1.1.5:
 angular-messages@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-messages/-/angular-messages-1.6.6.tgz#a9bb3fc5f971d745cd3a3bdbaabc6f1f4deb13f3"
+
+angular-mocks@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.6.tgz#c93018e7838c6dc5ceaf1a6bcf9be13c830ea515"
 
 angular2-template-loader@^0.6.2:
   version "0.6.2"
