@@ -11,7 +11,8 @@ export default class CoursesController implements angular.IComponentController {
 
   async $onInit() {
     try {
-      this.courses = this.CoursesService.all();
+      const response = await this.CoursesService.all();
+      this.courses = response.data.courses;
     } catch(error) {
       console.log(error);
     }

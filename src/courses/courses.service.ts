@@ -13,7 +13,8 @@ export default class Courses {
   constructor(private $http: angular.IHttpService) {}
 
   all() {
-    return this.$http.get('/api/v1.0/courses');
+    return this.$http.get('/api/v1.0/courses')
+      .then(({data}) => data);
   }
 
   create(payload: any) {
