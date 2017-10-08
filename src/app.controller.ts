@@ -1,5 +1,3 @@
-
-
-export class AppController implements angular.IComponentController {
+export default class AppController implements angular.IComponentController {
   
 }
