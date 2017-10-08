@@ -2,13 +2,35 @@
 # yarn lockfile v1
 
 
-"@types/angular@^1.6.32":
+"@types/angular-material@^1.1.54":
+  version "1.1.54"
+  resolved "https://registry.yarnpkg.com/@types/angular-material/-/angular-material-1.1.54.tgz#ee0649754c02b7b08f4b50126104112e970e999b"
+  dependencies:
+    "@types/angular" "*"
+
+"@types/angular-ui-router@^1.1.39":
+  version "1.1.39"
+  resolved "https://registry.yarnpkg.com/@types/angular-ui-router/-/angular-ui-router-1.1.39.tgz#dffe4083e8a59b287981cb41896447f32b3663c4"
+  dependencies:
+    "@types/angular" "*"
+
+"@types/angular@*", "@types/angular@^1.6.32":
   version "1.6.32"
   resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.32.tgz#fc791aad038227d9413eb5e552993e1076f8a509"
 
 "@types/requirejs@^2.1.31":
   version "2.1.31"
   resolved "https://registry.yarnpkg.com/@types/requirejs/-/requirejs-2.1.31.tgz#a24eaa0ee4f6b84feb8f521ca6550d48490b2bc6"
+
+"@uirouter/angularjs@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.8.tgz#09e7528884752fa4071ab1cf74325f10c6d6d8c9"
+  dependencies:
+    "@uirouter/core" "5.0.10"
+
+"@uirouter/core@5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.10.tgz#1a39eacbe33f3b44ab2c8fa4520cb1da92026cc3"
 
 abbrev@1:
   version "1.1.1"
@@ -81,9 +103,21 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-animate@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.6.tgz#6925647b141a040d241bf125040f1a150fcd8a70"
+
+angular-aria@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.6.tgz#58dd748e09564bc8409f739bde57b35fbee5b6a5"
+
 angular-material@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
+
+angular-messages@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular-messages/-/angular-messages-1.6.6.tgz#a9bb3fc5f971d745cd3a3bdbaabc6f1f4deb13f3"
 
 angular2-template-loader@^0.6.2:
   version "0.6.2"
