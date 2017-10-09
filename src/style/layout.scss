@@ -1,0 +1,17 @@
+.page-container {
+
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 24px 0;
+
+    .search-form {
+      margin-right: 16px;
+    }
+  }
+
+  .page-content {
+    margin: 24px 0;
+  }
+}
