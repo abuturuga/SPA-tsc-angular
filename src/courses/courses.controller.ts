@@ -18,7 +18,12 @@ export default class CoursesController implements angular.IComponentController {
       .then((response: any) => {
         this.courses = response.data.courses.map((course: Course) => {
           const length = course.candidates.length;
-          return {...course, procent: Math.floor(length / course.candidate_limit * 100)};
+
+          return {
+            ...course,
+            procent: Math.floor(length / course.candidate_limit * 100),
+            occupied: length
+          };
         });
       })
   }

@@ -5,6 +5,7 @@ export const CourseCardComponent: angular.IComponentOptions = {
     start: '<',
     end: '<',
     candidateLimit: '<',
-    procent: '<'
+    procent: '<',
+    occupied: '<'
   }
 };
