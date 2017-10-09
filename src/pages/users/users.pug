@@ -1,8 +1,13 @@
-ul.md-list
-  li.md-list-item(ng-repeat='user in $ctrl.users')
-    i.material-icons.md-18 person
-    div.md-list-item-text
-      h3
-        span(ng-bind='user.first_name')
-        span(ng-bind='user.last_name')
-      p(ng-bind='user.genderLabel')
+div.users-page-container
+  ul.md-list
+    li.md-list-item(ng-repeat='user in $ctrl.users')
+      i.material-icons.md-18 person
+      div.md-list-item-text
+        h3
+          span(ng-bind='user.first_name')
+          span(ng-bind='user.last_name')
+        p(ng-bind='user.genderLabel')
+  div.paginator-container
+    button.md-button.black(ng-click='$ctrl.prevPage()' ng-disabled='$ctrl.loading') Prev
+    span(ng-bind='$ctrl.currentPage')
+    button.md-button.black(ng-click='$ctrl.nextPage()' ng-disabled='$ctrl.loading') Next

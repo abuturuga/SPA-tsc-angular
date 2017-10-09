@@ -12,7 +12,7 @@ Router.get('/', (req, res) => {
 
   res.send({
     status: 'success',
-    data: {users: users.slice(page, limit)},
+    data: {users: users.slice(page * limit, (page * limit) + limit)},
     pagination: {
       per_page: limit,
       page_number: users.length

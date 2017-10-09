@@ -6,4 +6,11 @@
   text-transform: uppercase;
   padding: 0 8px;
   text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  &.black {
+    color: rgba(black, .87);
+  }
 }

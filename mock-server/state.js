@@ -21,9 +21,9 @@ const createCourse = course => {
 };
 
 const createUser = payload => {
-  
+
   state.users.push(payload);
-  
+
 };
 
 const rand = limit => Math.floor(Math.random() * limit);
@@ -54,8 +54,8 @@ const initUsers = limit => Array(limit).fill(0)
   .map((i, index) => ({
     id: index,
     gender: genderSeed(),
-    first_name: `Jo ${rand(100)}`,
-    last_name: `Doe ${rand(100)}`
+    first_name: `Jo${rand(100)}`,
+    last_name: `Doe${rand(100)}`
   }));
 
 const init = () => {

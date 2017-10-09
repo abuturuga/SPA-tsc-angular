@@ -16,8 +16,8 @@ export default class Users {
 
   constructor(private $http: angular.IHttpService) {}
 
-  all() {
-    return this.$http.get('/api/v1.0/users?page=0&limit=10')
+  all(page: number = 0) {
+    return this.$http.get(`/api/v1.0/users?page=${page}&limit=10`)
       .then(({data}) => data);
   }
 

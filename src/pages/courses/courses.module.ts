@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import { module } from 'angular';
 import '@uirouter/angularjs';
 import CoursesService from './courses.service';
 import { CoursesComponent } from './courses.component';
@@ -22,7 +22,7 @@ class Config {
 
 }
 
-export default angular.module('app.courses-page', [
+export default module('app.courses-page', [
   'ui.router',
   'course.card'
 ])

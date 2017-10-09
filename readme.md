@@ -28,7 +28,7 @@ In the current folder run:
 
 ### Mock Server
 This is a simple express.js server mocking the routes and the model of the application, you need to start this first because the webpack-dev-server has a proxy for this.
-Type the following command in the project route: 
+Type the following command in the project route:
 
 ```bash
   node ./mock-server/index.js
