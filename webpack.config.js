@@ -29,7 +29,7 @@ module.exports = {
         test: /\.pug$/,
         use: ['raw-loader', 'pug-html-loader']
       },
-      {   
+      {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       }

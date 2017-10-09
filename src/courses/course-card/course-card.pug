@@ -1,3 +1,22 @@
-.course-card
-  div.
-  span.md-headline {{$ctrl.title}}
+.course-card-content
+  h2.card-title(ng-bind='$ctrl.title')
+  div.card-content
+    div.time
+      span.time-interval
+        i.material-icons.md-18 date_range
+        label start
+        span {{$ctrl.start | date:'yyyy-MM-dd'}}
+      span.time-interval 
+        i.material-icons.md-18 date_range
+        label end
+        span {{$ctrl.end | date:'yyyy-MM-dd'}}
+    progress-bar(procent='$ctrl.procent')
+    div.card-info
+      span
+        i.material-icons.md-18 people_outline
+        label available 
+        span(ng-bind='$ctrl.candidateLimit')
+      span
+        i.material-icons.md-18 people
+        label free 
+        span(ng-bind='$ctrl.candidateLimit')

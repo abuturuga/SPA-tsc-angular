@@ -1,0 +1,10 @@
+progress-bar {
+  display: block;
+  height: 8px;
+  background: #90CAF9;
+  .progress-bar {
+    transition: width 2s linear 1s;
+    height: 8px;
+    background: #2196F3;
+  }
+}

@@ -1,11 +1,9 @@
-h1 Courses
-
-md-content.md-padding(
-    layout-gt-xs='row'
-    layout-align='start center'
-  )
-  course-card(
-    flex='50' 
-    data-title="course.title" 
-    ng-repeat='course in $ctrl.courses'
-  )
+div.courses-container
+  div.course-wrapper(ng-repeat='course in $ctrl.courses')
+    course-card(
+      title='course.title'
+      start='course.start'
+      end='course.end'
+      candidate-limit='course.candidate_limit'
+      procent='course.procent'
+    )

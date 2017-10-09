@@ -3,7 +3,8 @@ export interface Course {
   begin: number;
   end: number;
   title: string;
-  canditate_limit: number;
+  candidate_limit: number;
+  candidates: any[];
 }
 
 export default class Courses {
@@ -30,4 +31,3 @@ export default class Courses {
   }
 
 }
-

@@ -1,0 +1,49 @@
+course-card {
+  border-radius: 2px;
+  padding: 8px;
+  display: block;
+  background: white;
+  margin: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+
+  label {
+    font-weight: 500;
+    margin-right: 4px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .card-content {
+    .time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .time-interval {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start center;
+
+    & > span {
+      margin-right: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}

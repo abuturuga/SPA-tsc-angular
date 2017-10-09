@@ -1,6 +1,10 @@
 export const CourseCardComponent: angular.IComponentOptions = {
   templateUrl: 'course-card.pug',
   bindings: {
-    title: '<'
+    title: '<',
+    start: '<',
+    end: '<',
+    candidateLimit: '<',
+    procent: '<'
   }
 };
