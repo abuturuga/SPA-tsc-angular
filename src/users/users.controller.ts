@@ -1,4 +1,4 @@
-import UsersService, { User } from './users.service';
+import UsersService, { User, Gender } from './users.service';
 
 
 export default class UsersController implements angular.IComponentController {
@@ -19,7 +19,11 @@ export default class UsersController implements angular.IComponentController {
     this.UsersService.all()
       .then((response: any) => {
         const {data: {users}, pagination: {page_number}} = response;
-        this.users = users;
+        
+        this.users = users.map((user: User) => {
+          const genderLabel = (user.gender === Gender.male) ? 'male' : 'female';
+          return {...user, genderLabel};
+        });
         this.totalPages = page_number;
       });
   }
