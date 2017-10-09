@@ -1,9 +1,8 @@
-import * as angular from 'angular';
+import { module } from 'angular';
 import { AppComponent } from './app.component';
 import '@uirouter/angularjs';
 import './components/components.module';
-import './courses/courses.module';
-import './users/users.module';
+import './pages/pages.module';
 import './app.scss';
 
 
@@ -17,9 +16,9 @@ class Config {
 
 }
 
-export default angular.module('SPA-tsc', [
-  'courses',
-  'users',
+export default module('SPA-tsc', [
+  'ui.router',
+  'app.pages',
   'app.components'
 ])
 .component('appRoot', AppComponent)

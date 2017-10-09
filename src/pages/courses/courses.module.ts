@@ -13,7 +13,7 @@ class Config {
     constructor($stateProvider: angular.ui.IStateProvider) {
       const page: angular.ui.IStateParamsService = {
         name: 'courses',
-        component: 'courses',
+        component: 'coursesPage',
         url: '/'
       };
 
@@ -22,11 +22,11 @@ class Config {
 
 }
 
-export default angular.module('courses', [
+export default angular.module('app.courses-page', [
   'ui.router',
   'course.card'
 ])
 .service('CoursesService', CoursesService)
-.component('courses', CoursesComponent)
+.component('coursesPage', CoursesComponent)
 .config(Config)
 .name;
