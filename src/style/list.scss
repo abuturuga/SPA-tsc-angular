@@ -1,8 +1,42 @@
 .md-list {
 
   .md-list-item {
+    width: 100%;
     min-height: 88px;
     height: auto;
+    border-bottom: 1px solid rgba(black, .12);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: .01em;
+      margin: 0;
+      line-height: 1.2em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      span {
+        margin-right: 4px;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: rgba(black, .54);
+    }
+
+    & > i {
+      font-size: 32px;
+      background: #9E9E9E;
+      border-radius: 50%;
+      padding: 8px;
+      margin-right: 16px;
+    }
   }
-  
+
 }
