@@ -1,10 +1,18 @@
-div.courses-page-container
-  div.course-wrapper(ng-repeat='course in $ctrl.courses')
-    course-card(
-      title='course.title'
-      start='course.start'
-      end='course.end'
-      candidate-limit='course.candidate_limit'
-      procent='course.procent'
-      occupied='course.occupied'
-    )
+div.courses-page-container.page-container
+  div.page-header.paper
+    div.group.search-form
+      i.material-icons.md-18 search
+      input(type='text' ng-model='$ctrl.searchString' placeholder='type...')
+    a.md-button.black(ui-sref='') Create
+    
+  div.page-content
+    div.courses-container
+      div.course-wrapper(ng-repeat='course in $ctrl.courses')
+        course-card(
+          title='course.title'
+          start='course.start'
+          end='course.end'
+          candidate-limit='course.candidate_limit'
+          procent='course.procent'
+          occupied='course.occupied'
+        )
