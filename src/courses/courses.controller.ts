@@ -1,19 +1,20 @@
-import { Course } from './courses.service';
+import CoursesService, { Course } from './courses.service';
 
 
 export default class CoursesController implements angular.IComponentController {
 
   static $inject = [ 'CoursesService' ];
-  courses: Course[] = [];
 
-  constructor(private CoursesService: any) {
+  private courses: Course[] = [];
+
+  constructor(private CoursesService: CoursesService) {
     this.fetchCourses();
   }
 
   /**
    * Fetch courses from the server and bind them to component.
    */
-  fetchCourses(): void {
+  private fetchCourses(): void {
     this.CoursesService.all()
       .then((response: any) => {
         this.courses = response.data.courses.map((course: Course) => {

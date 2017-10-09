@@ -1,10 +1,13 @@
+import { User } from '../users/users.service';
+
+
 export interface Course {
   id: number;
   begin: number;
   end: number;
   title: string;
   candidate_limit: number;
-  candidates: any[];
+  candidates: User[];
 }
 
 export default class Courses {
