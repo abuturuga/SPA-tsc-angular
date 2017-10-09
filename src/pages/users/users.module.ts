@@ -2,6 +2,7 @@ import { module } from 'angular';
 import '@uirouter/angularjs';
 import UsersService from './users.service';
 import { UsersComponent } from './users.component';
+import './users-form/users-form.module';
 import './users.scss';
 
 
@@ -21,7 +22,7 @@ class Config {
 
 }
 
-export default module('app.users-page', ['ui.router'])
+export default module('app.users-page', ['ui.router', 'app.users-form-page'])
   .service('UsersService', UsersService)
   .component('usersPage', UsersComponent)
   .config(Config)

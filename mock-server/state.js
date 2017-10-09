@@ -21,9 +21,9 @@ const createCourse = course => {
 };
 
 const createUser = payload => {
-
+  const length = state.users.length;
   state.users.push(payload);
-
+  return length;
 };
 
 const rand = limit => Math.floor(Math.random() * limit);

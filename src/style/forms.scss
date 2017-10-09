@@ -5,7 +5,12 @@
   align-items: center;
   justify-content: flex-start;
 
-  input 				{
+  .inline-label {
+    font-weight: 500;
+    min-width: 100px;
+  }
+
+  input {
     font-size:18px;
     padding:10px 10px 10px 5px;
     display:block;
@@ -17,4 +22,21 @@
     }
   }
 
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &> label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    input {
+      width: 20px;
+    }
+  }
 }

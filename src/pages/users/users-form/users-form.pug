@@ -1,0 +1,18 @@
+div.users-form-page-container.page-container
+  div.page-content.paper
+    div.group.margin-bottom
+      label.inline-label First Name
+      input(type='text' ng-model='$ctrl.model.first_name' placeholder='type...')
+    div.group.margin-bottom
+      label.inline-label Last Name
+      input(type='text' ng-model='$ctrl.model.last_name' placeholder='type...')
+    div.group.margin-bottom
+      label.inline-label Gender
+      div.radio-group 
+        label Male
+          input(type='radio' ng-model='$ctrl.model.gender' name='gender' value='m')
+        label Female
+          input(type='radio' ng-model='$ctrl.model.gender' name='gender' value='f')
+    div.form-footer
+      button.md-button.black(ng-click='$ctrl.save()' ng-disabled='$ctrl.loading') Save
+      a.md-button.black(ui-sref='users' ng-disabled='$ctrl.loading') Cancel

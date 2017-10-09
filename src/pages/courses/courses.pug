@@ -7,7 +7,7 @@ div.courses-page-container.page-container
     
   div.page-content
     div.courses-container
-      div.course-wrapper(ng-repeat='course in $ctrl.courses')
+      div.course-wrapper(ng-repeat='course in $ctrl.courses | filter:$ctrl.searchString')
         course-card(
           title='course.title'
           start='course.start'

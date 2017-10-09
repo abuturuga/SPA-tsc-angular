@@ -1,0 +1,10 @@
+.users-form-page-container {
+
+  .form-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    &> button {
+      margin-left: 8px;
+    }
+  }
+}

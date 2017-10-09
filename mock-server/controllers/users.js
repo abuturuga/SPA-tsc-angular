@@ -20,4 +20,15 @@ Router.get('/', (req, res) => {
   });
 });
 
+Router.post('/', (req, res) => {
+  const id = state.createUser(req.body);
+
+  res.send({
+    status: 'success',
+    data: {
+      id
+    }
+  })
+});
+
 module.exports = Router;
