@@ -41,7 +41,15 @@ export default class UsersController implements angular.IComponentController {
     this.fetchUsers(0, this.searchString);
   }
 
+  private confirm(): void {
+    return
+  }
+
   private deleteUser(id: number): void {
+    if(!window.confirm('Are you sure you want to delete this user?')) {
+      return;
+    }
+
     this.UsersService.delete(id)
       .then((response: any) => {
         const index: number = this.users.findIndex((user: User) => user.id === id);
