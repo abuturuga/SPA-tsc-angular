@@ -14,6 +14,12 @@ div.users-page-container.page-container
             span(ng-bind='user.first_name')
             span(ng-bind='user.last_name')
           p(ng-bind='user.genderLabel')
+        div.md-list-buttons
+          button.md-button.black(ng-click='$ctrl.deleteUser(user.id)')
+            i.material-icons.md-18 delete
+          a.md-button.black(ui-sref='usersForm({id: user.id})')
+            i.material-icons.md-18 mode_edit
+  
     div.paginator-container
       button.md-button.black(ng-click='$ctrl.prevPage()' ng-disabled='$ctrl.loading') Prev
       span(ng-bind='$ctrl.currentPage')

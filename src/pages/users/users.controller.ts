@@ -36,6 +36,19 @@ export default class UsersController implements angular.IComponentController {
       });
   }
 
+  private deleteUser(id: number): void {
+    this.UsersService.delete(id)
+      .then((response: any) => {
+        const index: number = this.users.findIndex((user: User) => user.id === id);
+        if(index !== -1) {
+          this.users.splice(index, 1);
+        }
+      })
+      .catch((error: any) => {
+        console.log(error);
+      });
+  }
+
   private prevPage(): void {
     if(this.currentPage === 0) {
       return;

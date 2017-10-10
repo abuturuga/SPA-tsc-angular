@@ -26,6 +26,13 @@ const createUser = payload => {
   return length;
 };
 
+const removeUser = id => {
+  const index = state.users.findIndex(u => u.id.toString() === id.toString());
+  if(index === -1) return null;
+
+  state.users.splice(index, 1);
+};
+
 const rand = limit => Math.floor(Math.random() * limit);
 
 const initCourses = (limit, users) => Array(limit).fill(0)
@@ -66,6 +73,7 @@ const init = () => {
 module.exports = {
   get,
   createUser,
+  removeUser,
   createCourse,
   init
 };

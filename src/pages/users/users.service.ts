@@ -4,11 +4,12 @@ export enum Gender {
 }
 
 export interface User {
-  id?: number;
+  id: number;
   gender: Gender;
   first_name: string;
   last_name: string;
 }
+
 
 export default class Users {
 
@@ -23,14 +24,41 @@ export default class Users {
   }
 
   /**
+   * Get a single user from the server
+   * @param  {number} id [User id]
+   */
+  get(id: number) {
+    return this.$http.get(`${this.endpoint}/${id}`)
+      .then(({data}) => data);
+  }
+
+  /**
+   * Update an user from the server
+   * @param  {User}   user [User model]
+   */
+  update(user: User) {
+    const id: number = user.id;
+    
+    return this.$http.put(`${this.endpoint}/${id}`, user)
+      .then(({data}) => data);
+  }
+
+  /**
    * Create a new user resource on the server
    * @param  {User}   user [User model]
    */
   create(user: User) {
     return this.$http.post(this.endpoint, user)
-      .then((response: any) => {
-        console.log(response);
-      });
+      .then(({data}) => data);
+  }
+
+  /**
+   * Remove a user resource from the server
+   * @param  {number} id [User id]
+   */
+  delete(id: number) {
+    return this.$http.delete(`${this.endpoint}/${id}`)
+      .then(({data}) => data);
   }
 
 }
