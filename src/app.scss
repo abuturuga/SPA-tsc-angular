@@ -1,9 +1,11 @@
 @import './style/reset';
+@import './style/bourbon/bourbon';
 @import './style/layout';
 @import './style/buttons';
 @import './style/list';
 @import './style/forms';
 @import './style/paper';
+
 
 .container {
   max-width: 1200px;
