@@ -18,8 +18,8 @@ export default class Users {
 
   constructor(private $http: angular.IHttpService) {}
 
-  all(page: number = 0) {
-    return this.$http.get(`${this.endpoint}?page=${page}&limit=10`)
+  all(page: number = 0, filter: string = '') {
+    return this.$http.get(`${this.endpoint}?page=${page}&limit=10&filter=${filter}`)
       .then(({data}) => data);
   }
 
@@ -38,7 +38,7 @@ export default class Users {
    */
   update(user: User) {
     const id: number = user.id;
-    
+
     return this.$http.put(`${this.endpoint}/${id}`, user)
       .then(({data}) => data);
   }

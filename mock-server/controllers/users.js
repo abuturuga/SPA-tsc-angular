@@ -19,6 +19,15 @@ const findUser = (id, res) => {
 
 Router.get('/', (req, res) => {
   const {users} = state.get();
+  let usersResult = [];
+
+  if(req.query.filter) {
+    usersResult = users.filter(user =>
+      `${user.first_name} ${user.last_name}`.includes(req.query.filter));
+  } else {
+    usersResult = users;
+  }
+
   let page = parseInt(req.query.page),
       limit = parseInt(req.query.limit);
 
@@ -27,10 +36,10 @@ Router.get('/', (req, res) => {
 
   res.send({
     status: 'success',
-    data: {users: users.slice(page * limit, (page * limit) + limit)},
+    data: {users: usersResult.slice(page * limit, (page * limit) + limit)},
     pagination: {
       per_page: limit,
-      page_number: users.length
+      page_number: usersResult.length
     }
   });
 });
@@ -39,7 +48,7 @@ Router.get('/:id', (req, res) => {
   const index = findUser(req.params.id, res);
   if(index === null) return;
   const user = state.get().users[index];
-  console.log(index);
+
   res.send({
     status: 'success',
     data: {

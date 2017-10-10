@@ -9,6 +9,7 @@ export default class UsersController implements angular.IComponentController {
   private totalPages: number = 0;
   private currentPage: number = 0;
   private loading: boolean = false;
+  private searchString: string = '';
 
   constructor(private UsersService: UsersService) {
     this.fetchUsers();
@@ -17,10 +18,10 @@ export default class UsersController implements angular.IComponentController {
   /**
    * Fetch users from the server and bind them into component.
    */
-  private fetchUsers(page: number = 0): void {
+  private fetchUsers(page: number = 0, filter: string = ''): void {
     this.loading = true;
 
-    this.UsersService.all(page)
+    this.UsersService.all(page, filter)
       .then((response: any) => {
         const {data: {users}, pagination: {page_number}} = response;
 
@@ -34,6 +35,10 @@ export default class UsersController implements angular.IComponentController {
       .catch((error: any) => {
         this.loading = false;
       });
+  }
+
+  private filterUsers(): void {
+    this.fetchUsers(0, this.searchString);
   }
 
   private deleteUser(id: number): void {
