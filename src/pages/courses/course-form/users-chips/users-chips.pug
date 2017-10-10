@@ -1,0 +1,6 @@
+div.users-chips-container
+  div.chips-wrapper
+    div.chip(ng-repeat='user in $ctrl.users')
+      span.label
+        span(ng-bind='user.first_name')
+        span(ng-bind='user.last_name')

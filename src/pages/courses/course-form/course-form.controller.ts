@@ -1,17 +1,22 @@
 import CoursesService, { Course } from '../courses.service';
+import UsersService, { User } from '../../users/users.service';
 
 
 export default class CourseFormController implements angular.IComponentController {
 
-  static $inject = [ 'CoursesService', '$state' ];
+  static $inject = [ 'CoursesService', '$state', 'UsersService' ];
 
+  private availableUsers: User[] = [];
   private loading: boolean = false;
   private model: Course;
   private id: string;
+  private startDate: any = null;
+  private endDate: any = null;
 
   constructor(
     private CoursesService: CoursesService,
-    private $state: angular.ui.IStateService
+    private $state: angular.ui.IStateService,
+    private UsersService: UsersService
   ) {}
 
   $onInit() {
@@ -22,15 +27,29 @@ export default class CourseFormController implements angular.IComponentControlle
     }
   }
 
+  private updateDate(): void {
+    this.model.start = (this.startDate) ? this.startDate.getTime() : null;
+    this.model.end = (this.startDate) ? this.endDate.getTime() : null;
+  }
+
   private fetchCourse(): void {
     this.loading = true;
     this.CoursesService.get(parseInt(this.id))
       .then(({data}) => {
         this.model = data.course;
+        this.startDate = new Date(this.model.start);
+        this.endDate = new Date(this.model.end);
         this.loading = false;
       })
       .catch(() => {
         this.loading = false;
+      });
+  }
+
+  private onUsersQuery(query: any): void {
+    this.UsersService.all(0, query)
+      .then(({data}) => {
+        this.availableUsers = data.users;
       });
   }
 

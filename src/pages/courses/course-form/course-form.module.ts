@@ -1,7 +1,8 @@
 import { module } from 'angular';
 import '@uirouter/angularjs';
 import { CouseFormPageComponent } from './course-form.component';
-import './course-form.scss';
+import './users-chips/users-chips.module';
+
 
 class Config {
 
@@ -19,7 +20,10 @@ class Config {
 
 }
 
-export default module('app.course-form-page', ['ui.router'])
-  .component('courseFormPage', CouseFormPageComponent)
-  .config(Config)
-  .name;
+export default module('app.course-form-page', [
+  'ui.router',
+  'app.users-chips'
+])
+.component('courseFormPage', CouseFormPageComponent)
+.config(Config)
+.name;

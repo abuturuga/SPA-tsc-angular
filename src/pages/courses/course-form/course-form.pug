@@ -5,13 +5,30 @@ div.course-form-page-container.page-container
       input(type='text' ng-model='$ctrl.model.title' placeholder='type...')
     div.group.margin-bottom
       label.inline-label Begin
-      input(type='text' ng-model='$ctrl.model.start' placeholder='type...')
+      input(
+        type='date' 
+        ng-model='$ctrl.startDate' 
+        ng-change='$ctrl.updateDate()'
+        placeholder='type...'
+      )
     div.group.margin-bottom
       label.inline-label End
-      input(type='text' ng-model='$ctrl.model.end' placeholder='type...')
+      input(
+        type='date' 
+        ng-model='$ctrl.endDate' 
+        ng-change='$ctrl.updateDate()'
+        placeholder='type...'
+      )
     div.group.margin-bottom
       label.inline-label Candidate limit
       input(type='text' ng-model='$ctrl.model.candidate_limit' placeholder='type...')
+    div.group.margin-bottom
+      label.inline-label Users
+      users-chips(
+        users='$ctrl.model.candidates'
+        on-query='$ctrl.onUsersQuery(query)'
+        available-users='$ctrl.availableUsers'
+      )
     div.form-footer
       button.md-button.black(ng-click='$ctrl.save()' ng-disabled='$ctrl.loading') Save
       a.md-button.black(ui-sref='courses' ng-disabled='$ctrl.loading') Cancel

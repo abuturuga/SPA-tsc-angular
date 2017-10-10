@@ -3,7 +3,7 @@ import { User } from '../users/users.service';
 
 export interface Course {
   id: number;
-  begin: number;
+  start: number;
   end: number;
   title: string;
   candidate_limit: number;
