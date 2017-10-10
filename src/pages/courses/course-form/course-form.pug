@@ -1,0 +1,17 @@
+div.course-form-page-container.page-container
+  div.page-content.paper
+    div.group.margin-bottom
+      label.inline-label Title
+      input(type='text' ng-model='$ctrl.model.title' placeholder='type...')
+    div.group.margin-bottom
+      label.inline-label Begin
+      input(type='text' ng-model='$ctrl.model.start' placeholder='type...')
+    div.group.margin-bottom
+      label.inline-label End
+      input(type='text' ng-model='$ctrl.model.end' placeholder='type...')
+    div.group.margin-bottom
+      label.inline-label Candidate limit
+      input(type='text' ng-model='$ctrl.model.candidate_limit' placeholder='type...')
+    div.form-footer
+      button.md-button.black(ng-click='$ctrl.save()' ng-disabled='$ctrl.loading') Save
+      a.md-button.black(ui-sref='courses' ng-disabled='$ctrl.loading') Cancel

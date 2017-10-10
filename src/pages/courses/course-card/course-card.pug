@@ -1,5 +1,5 @@
 .course-card-content
-  h2.card-title(ng-bind='$ctrl.title')
+  a.card-title(ng-bind='$ctrl.title' ui-sref='courseForm({id: $ctrl.id})')
   div.card-content
     div.time
       span.time-interval

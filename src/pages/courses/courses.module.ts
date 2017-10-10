@@ -3,6 +3,7 @@ import '@uirouter/angularjs';
 import CoursesService from './courses.service';
 import { CoursesComponent } from './courses.component';
 import './course-card/course-card.module';
+import './course-form/course-form.module';
 import './courses.scss';
 
 
@@ -24,6 +25,7 @@ class Config {
 
 export default module('app.courses-page', [
   'ui.router',
+  'app.course-form-page',
   'course.card'
 ])
 .service('CoursesService', CoursesService)

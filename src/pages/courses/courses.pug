@@ -3,12 +3,13 @@ div.courses-page-container.page-container
     div.group.search-form
       i.material-icons.md-18 search
       input(type='text' ng-model='$ctrl.searchString' placeholder='type...')
-    a.md-button.black(ui-sref='') Create
+    a.md-button.black(ui-sref='courseForm({id: "new"})') Create
     
   div.page-content
     div.courses-container
       div.course-wrapper(ng-repeat='course in $ctrl.courses | filter:$ctrl.searchString')
         course-card(
+          id='course.id'
           title='course.title'
           start='course.start'
           end='course.end'
